@@ -1,15 +1,19 @@
 import java.util.Scanner;
 
-public class TugasPP2Waktu {
+class JumlahBensin {
+
     public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
-        System.out.print("Masukkan Total Waktu (Detik) : ");
-        int WIB = read.nextInt();
-        int Sisa1 = WIB%3600;
-        int Jam = WIB/3600;
-        int Menit = Sisa1/60;
-        int Detik = WIB-(Jam*3600)-(Menit*60);
-            System.out.println("Waktu Sekarang Adalah (Jam,Menit,Detik) : ");
-            System.out.println(Jam + ":" + Menit + ":" + Detik);
+        Scanner input = new Scanner (System.in);
+
+        System.out.println("Masukkan Nilai Waktu (Jam) : ");
+        float W = input.nextFloat();
+        System.out.println("Masukkan Nilai Kecepatan Rata-Rata (Km/Jam) :");
+        float K = input.nextFloat();
+
+        float E = 14;
+        float J = W * K;
+        double B = J/E;
+
+        System.out.printf("Bensin Yang Digunakan : %.3f L", + B,+ J);
     }
 }
